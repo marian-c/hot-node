@@ -1,11 +1,14 @@
 {
   "name": "hot-node",
-  "version": "1.0.0.pre.0",
+  "version": "1.0.0-pre.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "mocha --compilers ts:ts-node/register test",
-    "tsc": "tsc"
+    "test-ts": "mocha --compilers ts:ts-node/register test",    
+    "test": "mocha test",    
+    "build": "tsc",
+    "prepublish": "yarn build && mocha test",
+    "clean-built": "del-cli **/*.js **/*.js.map **/*.d.ts \"!node_modules/**\""
   },
   "dependencies": {
     "chokidar": "^1.6.1"

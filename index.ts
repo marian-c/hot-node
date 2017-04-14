@@ -93,7 +93,6 @@ export function register(options?: HotNodeOptions) {
         modulesToReload.push(entryModule)
         modulesToReloadMap[entryModule] = acceptMap[entryModule] || emptyCallback
       }
-      console.log('modulesToReload', modulesToReload)
       modulesToReload.forEach((moduleName) => {
         const acceptCallback = modulesToReloadMap[moduleName]
         let error = null
