@@ -1,0 +1,22 @@
+{
+  "name": "hot-node",
+  "version": "1.0.0.pre.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --compilers ts:ts-node/register test",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "chokidar": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/chokidar": "^1.6.0",
+    "@types/fs-extra": "^2.0.0",
+    "@types/mocha": "^2.2.40",
+    "fs-extra": "^2.1.2",
+    "mocha": "^3.2.0",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
+  }
+}
